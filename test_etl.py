@@ -1,11 +1,16 @@
 import pandas as pd
 from datetime import datetime
+import pytz
 
 dfInput = pd.read_csv('sample_products.csv')
 dfOutput = pd.read_csv('output/clean_products.csv')
 
+bangkok = pytz.timezone("Asia/Bangkok")
+now = datetime.now(bangkok)
+
+
 with open('output/test_result.txt', 'a') as f:
-    f.write(datetime.now().strftime("%d-%m-%Y %H:%M:%S") + '\n')
+    f.write(datetime.now(bangkok).strftime("%d-%m-%Y %H:%M:%S") + '\n')
 
     if dfOutput.dtypes['unit_price'] == 'int64':
         f.write("Case 1: Pass\n")
