@@ -25,4 +25,3 @@ with open('output/test_result.txt', 'a') as f:
     else:
         f.write("Case 2: Fail\n")
 
-        #
