@@ -7,7 +7,7 @@ dfOutput = pd.read_csv('output/clean_products.csv')
 
 bangkok = pytz.timezone("Asia/Bangkok")
 now = datetime.now(bangkok)
-
+##
 
 with open('output/test_result.txt', 'a') as f:
     f.write(datetime.now(bangkok).strftime("%d-%m-%Y %H:%M:%S") + '\n')
